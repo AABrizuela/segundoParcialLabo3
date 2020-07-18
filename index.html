@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./classes/vehiculo.js"></script>
+    <script src="./classes/auto.js"></script>
+    <script src="./classes/camioneta.js"></script>
+    <script src="./func/funcIndex.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Index</title>
+</head>
+<body>
+    <button type="button" id="buttonDiv" class="buttonDiv">Agregar</button>
+    <fieldset id="fieldset" class= "contenedor divAbsolute" style="background-color:lightgray;" hidden>
+        <button type="button" id="buttonClose" class="buttonClose">X</button>
+        <div class="form">            
+            <label class="formulario">ID</label>
+            <input type="text" disabled>
+            <label class="formulario">Marca</label>
+            <input type="text" id="inputMarca" width="50px" placeholder="Ingrese nombre..." required/>
+            <br>
+            <label>Tipo de vehículo</label>
+            <br>
+            <input type="radio" id="inputAuto"      name="tipo" width="50px" checked/> Auto
+            <input type="radio" id="inputCamioneta" name="tipo" width="50px"/> Camioneta
+            <br>
+            <div id="div4x4" hidden>
+                <input type="checkbox" id="input4x4"/> 4x4
+            </div>
+            <div id="divPuertas" hidden>
+                <label>Cantidad de puertas</label>
+                <input type="number" id="inputPuertas" min="3" max="5" placeholder="Ingrese cantidad de puertas..."/>
+            </div>            
+            <label>Modelo</label>
+            <input type="text" id = "inputModelo" width = "50px" placeholder="Ingrese Modelo..." required/>            
+            <label>Precio</label>
+            <input type="number" id="inputPrecio" min="1" placeholder="Precio..."/>
+            <br>            
+            <br>
+            <button type="button" class="buttonSave" id="buttonSave">Guardar</button>            
+        </div>
+    </fieldset>    
+    <input type="text" id="inputBusqueda" class="searchBar" placeholder="🔎 Buscar">
+    <br>    
+    <h2>Lista de Resultados</h2>
+    <table border="0" id="resultTable">
+            <thead class="resultTable">
+                <!-- th = table head (cabecera, columna) -->
+                <!-- tr = table row (fila)-->
+                <!-- td = table data (celdas) -->                
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Tipo de vehiculo</th>
+                <th>Precio</th>
+                <th>Detalle</th>
+                <th>Acción</th>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+</body>
+</html>
